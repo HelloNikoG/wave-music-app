@@ -1,0 +1,31 @@
+// partial for components
+.player {
+	min-height: 20vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+.time-control {
+	width: 50%;
+
+	display: flex; // add time controls ligned up
+	input {
+		width: 100%;
+		padding: 1rem 2rem; //padding top-bottom, left-right, allow to grab slider without actually grabbing
+	}
+	p {
+		padding: 1rem; // one number means all sides
+	}
+}
+
+.play-control {
+	display: flex;
+	width: 30%;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+	svg {
+		cursor: pointer;
+	}
+}
