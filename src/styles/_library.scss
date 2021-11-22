@@ -21,12 +21,12 @@
 	align-items: center;
 	padding: 1rem 2rem 1rem 2rem;
 	cursor: pointer;
-
+	transition: background 0.5s ease;
 	img {
 		width: 30%;
 	}
 	&:hover {
-		background: rgb(150, 188, 236);
+		background: rgb(181, 211, 248);
 	}
 }
 
@@ -53,10 +53,16 @@
 	border: transparent;
 }
 .selected {
-	background: violet;
+	background: rgb(236, 187, 236);
 }
 
 .active-library {
 	transform: translateX(0%);
 	opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+	.library {
+		width: 100%;
+	}
 }

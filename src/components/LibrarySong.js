@@ -20,9 +20,9 @@ function LibrarySong({
 	isPlaying,
 	setSongArray,
 }) {
-	const songSelectHandler = () => {
+	const songSelectHandler = async () => {
 		const selectedSong = songArray.filter((state) => state.id === id);
-		setCurrentSong(selectedSong[0]);
+		await setCurrentSong(selectedSong[0]);
 		const newSongs = songArray.map((song) => {
 			if (song.id === id) {
 				return {
@@ -38,14 +38,7 @@ function LibrarySong({
 		});
 		setSongArray(newSongs);
 		// setCurrentSong(song);
-		if (isPlaying) {
-			const playPromise = audioRef.current.play();
-			if (playPromise !== undefined) {
-				playPromise.then((audio) => {
-					audioRef.current.play();
-				});
-			}
-		}
+		if (isPlaying) audioRef.current.play();
 	};
 	return (
 		<div
